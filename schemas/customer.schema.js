@@ -20,7 +20,6 @@ const createCustomerSchema = Joi.object({
   phone: phone.required(),
   user: Joi.object({
     email: email.required(),
-    name: name2.required(),
     password: password.required(),
   }),
 });

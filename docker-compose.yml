@@ -2,7 +2,7 @@ version: "3.3"
 
 services:
   postgres:
-    image: postgres:13
+    image: postgres:14.3
     container_name: postgres
     ports:
       - "5432:5432"
@@ -20,23 +20,4 @@ services:
     environment:
       PGADMIN_DEFAULT_EMAIL: espe@mail.com
       PGADMIN_DEFAULT_PASSWORD: espe
-  mysql:
-    image: mysql:latest
-    container_name: mysql
-    ports:
-      - "3306:3306"
-    environment:
-      MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: myStore
-      MYSQL_USER: root
-      MYSQL_PASSWORD: root
-    volumes:
-      - ./mysql_data:/var/lib/mysql
-  phpmyadmin:
-    image: phpmyadmin/phpmyadmin
-    container_name: phpmysql
-    ports:
-      - "8080:80"
-    environment:
-      PMA_HOST: mysql
-      MYSQL_ROOT_PASSWORD: espe
+  
