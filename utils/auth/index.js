@@ -1,3 +1,6 @@
 const passport = require('passport');
-const LocalStrategy = require('./strategies/local-strategy');
-passport.use(LocalStrategy);
+// ✅ Correcto
+const LocalStrategy = require('./strategies/local.strategy');
+
+
+passport.use('local', LocalStrategy); // ✅ Registra como 'local'
